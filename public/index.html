@@ -4,14 +4,31 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="" sizes="16x16" />
         <title>Tailwind</title>
         <link rel="stylesheet" type="text/css" href="./output.css" />
     </head>
     <body>
         <div class="" id="container">
-            <div class="max-w-screen-2xl mx-auto text-base px-8 bg-slate-100">
-                <header class="py-6 mx-10">
-                    <nav class="flex flex-row justify-between items-center">
+            <div
+                class="
+                    font-Karla
+                    max-w-screen-2xl
+                    mx-auto
+                    text-base
+                    px-8
+                    bg-slate-100
+                "
+            >
+                <header class="py-6 mx-auto">
+                    <nav
+                        class="
+                            flex flex-row
+                            justify-between
+                            items-center
+                            relative
+                        "
+                    >
                         <div
                             class="
                                 basis-2/6
@@ -23,22 +40,30 @@
                             CoffeeStyle.
                         </div>
                         <ul
+                            id="ct-top-menu"
                             class="
                                 basis-3/6
-                                flex flex-row
-                                items-center
-                                justify-end
-                                gap-8
+                                lg:flex-row
+                                lg:items-center
+                                lg:justify-end
+                                lg:gap-8
                                 uppercase
                                 text-sm text-gray-500
                                 font-medium
+                                hidden
+                                lg:flex
+                                top-10
+                                z-50
+                                w-full
+                                text-center
+                                animate-slideDown
                             "
                         >
-                            <li class="ct-top-menu-item">
+                            <li class="ct-top-menu-item text-gray-800">
                                 <a class="" href="#">Home</a>
                             </li>
                             <li class="ct-top-menu-item">
-                                <a class="" href="#">Our Products</a>
+                                <a class="" href="#">Products</a>
                             </li>
                             <li class="ct-top-menu-item">
                                 <a class="" href="#">Block</a>
@@ -53,14 +78,16 @@
                                 <a class="" href="#">Styleguide</a>
                             </li>
                             <li class="ct-top-menu-item">
-                                <a class="" href="#">Hung Dev</a>
+                                <a class="" href="#">Hung</a>
                             </li>
                         </ul>
                         <ul
                             class="
-                                basis-1/6
+                                basis-3/6
+                                lg:basis-1/6
                                 flex
-                                justify-start
+                                justify-end
+                                lg:justify-start
                                 items-center
                                 ml-16
                                 text-sm text-gray-500
@@ -95,6 +122,34 @@
                                 </a>
                             </li>
                         </ul>
+
+                        <div
+                            class="
+                                basis-1/6
+                                lg:hidden
+                                flex
+                                items-center
+                                cursor-pointer
+                                px-2
+                                sm:px-4
+                            "
+                        >
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                class="ct-icon"
+                                id="ct-toggle-top-menu-icon"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5"
+                                />
+                            </svg>
+                        </div>
                     </nav>
                 </header>
                 <main>
@@ -124,5 +179,6 @@
             <!--end content-wrapper-->
         </div>
         <!--end root-->
+        <script src="./index.js" type="text/javascript" async></script>
     </body>
 </html>
